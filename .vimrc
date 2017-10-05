@@ -48,10 +48,13 @@ set number
 let mapleader=","
 imap jk <Esc>
 nnoremap <UP> :<UP>
-nnoremap . :
-nnoremap : .
-vnoremap . :
-vnoremap : .
+"Test senza . <-> :
+"nnoremap . :
+"nnoremap : .
+"vnoremap . :
+"vnoremap : .
+vnoremap ò :
+nnoremap ò :
 noremap <C-n> :NERDTreeToggle<CR>x  
 
 "Split window keybindings
@@ -81,8 +84,8 @@ noremap <C-b> :CtrlPBuffer<cr>
 let g:buffergator_viewport_split_policy = 'L'
 "Suppress default keybindings
 let g:buffergator_suppress_keymaps = 1
-nnoremap <leader>jj :BuffergatorMruCycleNext<cr>
-nnoremap <leader>kk :BuffergatorMruCyclePrev<cr>
+nnoremap <leader>ll :BuffergatorMruCycleNext<cr>
+nnoremap <leader>hh :BuffergatorMruCyclePrev<cr>
 nnoremap <leader>bl :BuffergatorOpen<cr>
 
 nnoremap <leader>T :enew<cr>
