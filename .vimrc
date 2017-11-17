@@ -121,4 +121,3 @@ set splitright
 set splitbelow
 nnoremap <leader>vt :VTerm<cr>
 nnoremap <leader>st :Term<cr>
-"YOYOYOYOYO
