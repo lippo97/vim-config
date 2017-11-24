@@ -22,8 +22,14 @@ Plugin 'L9'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'isRuslan/vim-es6'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'mattn/emmet-vim'
 Plugin 'iCyMind/NeoSolarized'
 Plugin 'mklabs/split-term.vim'
+Plugin 'w0rp/ale'
+Plugin 'ap/vim-css-color'
+"Plugin 'skywind3000/asyncrun.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -86,15 +92,13 @@ vnoremap <Leader>t: :Tabularize /:\zs<CR>
 set hidden
 "Ctrlp basic settings
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+  \ 'dir':  '\v[\/](node_modules)|(\.(git|hg|svn)|\_site)$',
   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
   \}
 noremap <C-b> :CtrlPBuffer<cr>
 
-"Buffergator settings 
-let g:buffergator_viewport_split_policy = 'L'
-"Suppress default keybindings
-let g:buffergator_suppress_keymaps = 1
+let g:NERDTreeIgnore=['node_modules']
+
 nnoremap <leader>l :bnext<cr>
 nnoremap <leader>h :bprevious<cr>
 nnoremap <leader>bl :ls<cr>
@@ -121,3 +125,16 @@ set splitright
 set splitbelow
 nnoremap <leader>vt :VTerm<cr>
 nnoremap <leader>st :Term<cr>
+
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
+
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+
+autocmd Filetype js setlocal ts=2 sts=2 sw=2
