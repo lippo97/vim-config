@@ -29,6 +29,7 @@ Plugin 'iCyMind/NeoSolarized'
 Plugin 'mklabs/split-term.vim'
 Plugin 'w0rp/ale'
 Plugin 'ap/vim-css-color'
+Plugin 'rstacruz/vim-closer'
 "Plugin 'skywind3000/asyncrun.vim'
 
 call vundle#end()
@@ -137,4 +138,4 @@ let g:ale_sign_error = '●' " Less aggressive than the default '>>'
 let g:ale_sign_warning = '.'
 let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
 
-autocmd Filetype js setlocal ts=2 sts=2 sw=2
+"autocmd Filetype js setlocal ts=2 sts=2 sw=2
